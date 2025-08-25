@@ -14,6 +14,10 @@
   - Any requirement on time/space complexity?  
   - Is the array sorted?  
   - Will the numbers in the array duplicate?  
+  
+- Naive Solution:
+  - Run a nested for loop and check each element to see if match
+  - Problem -> repeated work for checking... 
 
 ### Match
 - Problem Type: **Array + Hashmap**  
