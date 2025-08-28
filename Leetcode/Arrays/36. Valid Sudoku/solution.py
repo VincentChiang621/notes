@@ -19,5 +19,4 @@ class Solution:
                     cols[c].add(cur)
                     boxes[ind].add(cur)
 
-
         return True
