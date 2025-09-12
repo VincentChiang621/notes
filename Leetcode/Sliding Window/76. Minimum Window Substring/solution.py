@@ -20,9 +20,8 @@ class Solution:
 
             if sCount[c] == tCount[c]:
                 matches += 1
-            # print(matches, required)
+
             while matches == required:
-                # print(s[l:r+1])
                 # updates res if needed
                 if res == "" or len(res) >= (r - l + 1): 
                     res = s[l:r+1]
