@@ -34,7 +34,7 @@ General idea:
 
 ### Evaluate
 - **Time Complexity:** O(N)  
-- **Space Complexity:** O(N)  
+- **Space Complexity:** O(N)
 
 ---
 
