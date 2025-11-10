@@ -1,7 +1,7 @@
-# 1. Two Sum
+# 1405. Longest Happy String
 
-🔗 **Link:** [Two Sum](https://link.com)  
-💡 **Difficulty:** Easy  
+🔗 **Link:** [Longest Happy String](https://leetcode.com/problems/longest-happy-string/description/)  
+💡 **Difficulty:** Medium
 
 ---
 
@@ -10,27 +10,19 @@
 
 ### Understand
 - Clarifying questions:
-  - Can the `nums` array be empty?  
-  - Any requirement on time/space complexity?  
-  - Is the array sorted?  
-  - Will the numbers in the array duplicate?  
-  
-- Naive Solution:
-  - Run a nested for loop and check each element to see if match
-  - Problem -> repeated work for checking... 
+  - if we found a longest happy string, can we assume its unique? it doesn't have to be, return an arbitrary one
 
+  
 ### Match
-- Problem Type: **Array + Hashmap**  
+- Problem Type: **Heap**  
 - Strategies:
-  - **Sorting**: ❌ Not useful, since we need to return indices.  
-  - **Hashmap**: ✅ Efficient for storing values with indices and checking complements quickly.  
+  - **Heap**: maxHeap for counter [a, 'a'], [b, 'b'], [c, 'c']
 
 ### Plan
 General idea:  
-- Create a hashmap to store each number and its index.  
-- For each element, check if its complement (`target - num`) exists in the hashmap.  
-- If found, return the indices.  
-- Otherwise, store the current number and index in the hashmap.  
+- make maxHeap counter
+- always take the letter with most letters first
+- 'GREEDY APPROACH'
 
 ### Implement
 ➡️ See `solution.py` for the full implementation.  
@@ -40,10 +32,9 @@ General idea:
 - Debug as if a bug exists to confirm logic holds.  
 
 ### Evaluate
-- **Time Complexity:** O(N)  
-- **Space Complexity:** O(N)  
-- ✅ Pros: Fast lookup with hashmap.  
-- ❌ Cons: Extra memory usage.  
+- **Time Complexity:** O(N=a+b+c)  
+- **Space Complexity:** O(1)  
+
 
 ---
 
