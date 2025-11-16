@@ -1,7 +1,7 @@
-# 1. Two Sum
+# 39. Combination Sum
 
-🔗 **Link:** [Two Sum](https://link.com)  
-💡 **Difficulty:** Easy  
+🔗 **Link:** [Combination Sum]([https://link.com](https://leetcode.com/problems/combination-sum/description/))  
+💡 **Difficulty:** Medium
 
 ---
 
@@ -10,27 +10,19 @@
 
 ### Understand
 - Clarifying questions:
-  - Can the `nums` array be empty?  
-  - Any requirement on time/space complexity?  
-  - Is the array sorted?  
-  - Will the numbers in the array duplicate?  
+  - how many times can we repeat a candidate[i] -> infinitely
   
-- Naive Solution:
-  - Run a nested for loop and check each element to see if match
-  - Problem -> repeated work for checking... 
-
 ### Match
-- Problem Type: **Array + Hashmap**  
+- Problem Type: **Backtrack**  
 - Strategies:
-  - **Sorting**: ❌ Not useful, since we need to return indices.  
-  - **Hashmap**: ✅ Efficient for storing values with indices and checking complements quickly.  
+  - **Backtrack**: Brute force with DFS all the combination sums to target
 
 ### Plan
 General idea:  
-- Create a hashmap to store each number and its index.  
-- For each element, check if its complement (`target - num`) exists in the hashmap.  
-- If found, return the indices.  
-- Otherwise, store the current number and index in the hashmap.  
+- initialize res
+- add copy() when tar == curSum
+- return if curSum > tar
+- potentially prune when curSum > tar (if sorted)
 
 ### Implement
 ➡️ See `solution.py` for the full implementation.  
@@ -40,10 +32,8 @@ General idea:
 - Debug as if a bug exists to confirm logic holds.  
 
 ### Evaluate
-- **Time Complexity:** O(N)  
+- **Time Complexity:** O(2^N)  
 - **Space Complexity:** O(N)  
-- ✅ Pros: Fast lookup with hashmap.  
-- ❌ Cons: Extra memory usage.  
 
 ---
 
