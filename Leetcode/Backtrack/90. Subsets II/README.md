@@ -1,36 +1,29 @@
-# 1. Two Sum
+# 90. Subsets II
 
-🔗 **Link:** [Two Sum](https://link.com)  
-💡 **Difficulty:** Easy  
+🔗 **Link:** [Subsets II](https://leetcode.com/problems/subsets-ii/description/)  
+💡 **Difficulty:** Medium  
 
 ---
-
 
 ## UMPIRE Method
 
 ### Understand
 - Clarifying questions:
-  - Can the `nums` array be empty?  
-  - Any requirement on time/space complexity?  
-  - Is the array sorted?  
-  - Will the numbers in the array duplicate?  
+  - is nums sorted -> no
   
-- Naive Solution:
-  - Run a nested for loop and check each element to see if match
-  - Problem -> repeated work for checking... 
 
 ### Match
-- Problem Type: **Array + Hashmap**  
+- Problem Type: **Set + Backtrack**  
 - Strategies:
-  - **Sorting**: ❌ Not useful, since we need to return indices.  
-  - **Hashmap**: ✅ Efficient for storing values with indices and checking complements quickly.  
+  - **Set**: Stores the duplicate nums 
+  - **Backtrack**: append then pop()
 
 ### Plan
 General idea:  
-- Create a hashmap to store each number and its index.  
-- For each element, check if its complement (`target - num`) exists in the hashmap.  
-- If found, return the indices.  
-- Otherwise, store the current number and index in the hashmap.  
+- create res for return
+- add to res any answer
+- use parameter bt(i=int, arr=[])  
+- base case: i == len(nums)
 
 ### Implement
 ➡️ See `solution.py` for the full implementation.  
@@ -40,11 +33,8 @@ General idea:
 - Debug as if a bug exists to confirm logic holds.  
 
 ### Evaluate
-- **Time Complexity:** O(N)  
+- **Time Complexity:** O(N * 2^N)  
 - **Space Complexity:** O(N)  
-- ✅ Pros: Fast lookup with hashmap.  
-- ❌ Cons: Extra memory usage.  
+
 
 ---
-
-
