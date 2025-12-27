@@ -15,14 +15,12 @@
 ### Match
 - Problem Type: **Graph**  
 - Strategies:
-  - **Graph**:  
+  - **Graph**: union find 
 
 ### Plan
 General idea:  
-- Create a hashmap to store each number and its index.  
-- For each element, check if its complement (`target - num`) exists in the hashmap.  
-- If found, return the indices.  
-- Otherwise, store the current number and index in the hashmap.  
+- find() with path compression and union() with rank
+- whenever we try to union two same parents, then we detected a cycle!
 
 ### Implement
 ➡️ See `solution.py` for the full implementation.  
@@ -34,8 +32,6 @@ General idea:
 ### Evaluate
 - **Time Complexity:** O(N)  
 - **Space Complexity:** O(N)  
-- ✅ Pros: Fast lookup with hashmap.  
-- ❌ Cons: Extra memory usage.  
 
 ---
 
